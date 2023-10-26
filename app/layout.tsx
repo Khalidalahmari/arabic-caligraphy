@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { Aref_Ruqaa, Cairo } from "next/font/google";
 import "@/styles/globals.css";
 
-const cairo = Cairo({ subsets: ["latin"] });
+const cairo = Cairo({ subsets: ["latin"], display: "swap" });
 const aref = Aref_Ruqaa({
   variable: "--aref",
   subsets: ["arabic"],
   weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {

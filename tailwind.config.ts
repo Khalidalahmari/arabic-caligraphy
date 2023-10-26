@@ -29,8 +29,8 @@ const config: Config = {
     },
   },
   plugins: [
+    // require("prettier-plugin-tailwindcss"),
     require("tailwind-scrollbar")({ nocompatible: true }),
-    import("prettier-plugin-tailwindcss"),
   ],
 };
 export default config;

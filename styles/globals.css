@@ -29,12 +29,20 @@ body {
 }
 
 .bordered_Button {
-  @apply flex w-40 cursor-pointer select-none items-center justify-center bg-almondFrost-800 py-3 text-sm font-normal tracking-wide text-zinc-100 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95 sm:w-48 sm:py-4 sm:text-base border-[2px] border-almondFrost-50/10 bg-almondFrost-50/30 hover:bg-almondFrost-50/10;
+  @apply flex w-40 cursor-pointer select-none items-center justify-center border-[2px] border-almondFrost-50/40 bg-almondFrost-50/10 py-2 text-sm font-normal tracking-wide text-zinc-100 transition-all duration-100 hover:bg-almondFrost-50/30 active:scale-95 sm:w-48 sm:py-3 sm:text-base;
 }
 .simple_Button {
-  @apply flex w-40 font-bold cursor-pointer select-none items-center justify-center bg-almondFrost-800 py-3 text-sm text-peacoat-800 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95 sm:w-48 sm:py-4 sm:text-base;
+  @apply flex w-40 cursor-pointer select-none items-center justify-center bg-almondFrost-800 py-3 text-sm font-bold text-peacoat-800 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95 sm:w-48 sm:py-4 sm:text-base;
 }
 
 .titleFont {
   font-family: var(--aref);
+}
+
+/* Hero */
+
+.title-size {
+  /* Title: 30.00px → 96.00px */
+  --title: clamp(1.875rem, 0.4402rem + 7.1739vw, 6rem);
+  font-size: var(--title);
 }
