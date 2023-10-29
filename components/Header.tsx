@@ -28,7 +28,6 @@ export default function Header({}: Props) {
     };
   }, []);
   const isMobile = width == 0 ? false : width <= 1024;
-  console.log(isMobile);
   return (
     <div className="fixed top-0 z-50 mx-auto w-screen select-none bg-almondFrost-50 text-peacoat-800 drop-shadow-sm">
       <Menu as="div" className="mx-auto flex max-w-[2250px] flex-col">
