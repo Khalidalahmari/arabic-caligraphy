@@ -100,10 +100,10 @@ export default function Hero({}: Props) {
             }}
             className="3xl:mb-32 z-10 flex w-full flex-col items-center gap-y-2 sm:flex-row sm:justify-center sm:gap-0 sm:gap-x-12 lg:mb-20 lg:justify-end"
           >
-            <Link href={"/#"} className="bordered_Button">
+            <Link href={"/#سجل الآن"} className="bordered_Button">
               تواصل معنا
             </Link>
-            <Link href={"/#"} className="simple_Button">
+            <Link href={"/#سجل الآن"} className="simple_Button">
               سجل الآن
             </Link>
           </motion.div>

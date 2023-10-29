@@ -15,7 +15,7 @@ type Props = {};
 
 export default function Testimonials({}: Props) {
   return (
-    <div className="relative w-full bg-peacoat-800 py-20">
+    <div id={"تزكيات"} className="relative w-full bg-peacoat-800 py-20">
       <Image
         src={background}
         alt={""}
@@ -48,7 +48,7 @@ export default function Testimonials({}: Props) {
               </p>
               <div className="hidden h-24 w-full flex-row items-center justify-end text-peacoat-50 lg:flex">
                 <Link
-                  href={"#"}
+                  href={"/#سجل الآن"}
                   tabIndex={0}
                   className="group flex h-16 w-full cursor-pointer flex-row-reverse items-center justify-center gap-x-5 overflow-hidden bg-almondFrost-800 px-8 py-0 font-bold transition-all duration-100 hover:bg-almondFrost-600 active:scale-95 lg:w-60"
                 >
@@ -135,7 +135,7 @@ export default function Testimonials({}: Props) {
             >
               <div className="h-24 w-full items-center justify-end text-peacoat-50 lg:flex">
                 <Link
-                  href={"#"}
+                  href={"/#سجل الآن"}
                   tabIndex={0}
                   className="group flex h-16 w-full cursor-pointer flex-row items-center justify-center gap-x-5 overflow-hidden bg-almondFrost-800 px-8 py-0 font-medium transition-all duration-100 hover:bg-almondFrost-600 active:scale-[99%] lg:w-72"
                 >

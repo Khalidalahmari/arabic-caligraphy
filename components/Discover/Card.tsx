@@ -44,7 +44,7 @@ export default function Card({ title, description, image }: Props) {
       <h4 className="text-center text-lg font-bold">{title}</h4>
       <div className="text-sm font-normal">{description}</div>
       <Link
-        href={"/#"}
+        href={"/#سجل الآن"}
         className="flex w-28 cursor-pointer select-none items-center justify-center gap-x-2 rounded-full bg-almondFrost-800 px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-almondFrost-600 active:scale-90"
       >
         سجل الآن

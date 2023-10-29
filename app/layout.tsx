@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scroll-smooth scrollbar-thin scrollbar-track-almondFrost-50 scrollbar-thumb-almondFrost-800 selection:bg-slate-500"
+      className="scroll-pt-28 overflow-visible scroll-smooth scrollbar-thin scrollbar-track-almondFrost-50 scrollbar-thumb-almondFrost-800 selection:bg-slate-500"
     >
       <body
         className={`bg-peacoat-800 ${ruwuduRegular.variable} ${ruwuduMedium.variable} ${ruwuduSemiBold.variable} ${ruwuduBold.variable} ${aref.variable} ${cairo.className}`}

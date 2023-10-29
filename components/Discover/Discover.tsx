@@ -34,7 +34,10 @@ const child = {
 };
 export default function Discover({}: Props) {
   return (
-    <div className="relative flex h-full w-full flex-col items-center justify-center gap-y-16 bg-white py-12 text-peacoat-800 md:py-24">
+    <div
+      id={"أهدافنا"}
+      className="relative flex h-full w-full flex-col items-center justify-center gap-y-16 bg-white py-12 text-peacoat-800 md:py-24"
+    >
       <motion.h1
         variants={parent}
         initial={"hidden"}
@@ -46,6 +49,7 @@ export default function Discover({}: Props) {
           damping: 30,
           stiffness: 80,
         }}
+        viewport={{ once: true }}
         className="discover-titleSize font-Ruwudu-Bold z-10 flex flex-col items-center justify-center font-medium leading-tight"
       >
         <motion.p
@@ -56,6 +60,7 @@ export default function Discover({}: Props) {
             stiffness: 80,
           }}
           variants={child}
+          viewport={{ once: true }}
         >
           اكتشف فن الخط العربي
         </motion.p>
@@ -67,6 +72,7 @@ export default function Discover({}: Props) {
             stiffness: 80,
           }}
           variants={child}
+          viewport={{ once: true }}
         >
           في دورتنا الشاملة
         </motion.p>
@@ -83,6 +89,7 @@ export default function Discover({}: Props) {
         initial={"hidden"}
         whileInView={"show"}
         exit={"exit"}
+        viewport={{ once: true }}
         className="z-10 flex w-full flex-col items-center justify-center gap-x-4 gap-y-5 lg:flex-row"
       >
         <Card
