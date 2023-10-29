@@ -34,9 +34,24 @@ body {
 .simple_Button {
   @apply flex w-40 cursor-pointer select-none items-center justify-center bg-almondFrost-800 py-3 text-sm font-bold text-peacoat-800 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95 sm:w-48 sm:py-4 sm:text-base;
 }
+.color_Button {
+  @apply bg-almondFrost-800 text-peacoat-800 hover:bg-almondFrost-600;
+}
 
 .titleFont {
   font-family: var(--aref);
+}
+.font-Ruwudu-regular {
+  font-family: var(--ruwuduRegular);
+}
+.font-Ruwudu-medium {
+  font-family: var(--ruwuduMedium);
+}
+.font-Ruwudu-semiBold {
+  font-family: var(--ruwuduSemiBold);
+}
+.font-Ruwudu-Bold {
+  font-family: var(--ruwuduBold);
 }
 
 /* Hero */
@@ -45,4 +60,84 @@ body {
   /* Title: 30.00px → 96.00px */
   --title: clamp(1.875rem, 0.4402rem + 7.1739vw, 6rem);
   font-size: var(--title);
+}
+
+/* Discover */
+.discover-titleSize {
+  /* Title: 30.00px → 80.00px */
+  --title: clamp(1.875rem, 0.788rem + 5.4348vw, 5rem);
+  font-size: var(--title);
+}
+
+/* OptIn */
+
+.ContactInput {
+  @apply border-b-2 border-peacoat-600/20 bg-peacoat-200/75 px-4 py-3 text-end !font-bold !tracking-wider text-peacoat-800 outline-none transition-all placeholder:text-peacoat-800/60 hover:border-peacoat-400/70 focus:border-peacoat-400;
+}
+
+.svg-loader {
+  display: flex;
+  position: relative;
+  align-content: space-around;
+  justify-content: center;
+}
+.loader-svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  fill: none;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  @apply stroke-almondFrost-400;
+}
+.loader-svg.bg {
+  @apply stroke-transparent;
+  stroke-width: 4px;
+}
+
+.animate {
+  stroke-dasharray: 242.6;
+  animation: fill-animation 1s cubic-bezier(1, 1, 1, 1) 0s infinite;
+}
+
+@keyframes fill-animation {
+  0% {
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 141.3;
+    stroke-dashoffset: 141.3;
+  }
+  100% {
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 282.6;
+  }
+}
+
+/* LOGO */
+.logo-white-cls-1 {
+  fill: transparent;
+}
+
+.logo-white-cls-1,
+.logo-white-cls-2,
+.logo-white-cls-3 {
+  stroke-width: 0px;
+}
+
+.logo-white-cls-2 {
+  fill: #a0938d;
+}
+
+.logo-white-cls-3 {
+  fill: #fff;
+}
+
+/* Patterns */
+.dark_cls-1 {
+  @apply fill-peacoat-800 stroke-peacoat-800;
+  stroke-width: 5px;
 }

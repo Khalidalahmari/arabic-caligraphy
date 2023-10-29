@@ -24,6 +24,7 @@ const config: Config = {
           "400": "#cfc9c6",
           "600": "#b7ada9",
           "800": "#9f928c",
+          extra1: "#cfb7ac",
         },
       },
     },

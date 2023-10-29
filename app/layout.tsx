@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
-import { Aref_Ruqaa, Cairo } from "next/font/google";
+import { Aref_Ruqaa as Aref, Cairo } from "next/font/google";
 import "@/styles/globals.css";
+import "@/styles/patterns.css";
+import "@/styles/logo.css";
+import {
+  ruwuduBold,
+  ruwuduMedium,
+  ruwuduRegular,
+  ruwuduSemiBold,
+} from "@/utils/fonts/fonts";
 
 const cairo = Cairo({ subsets: ["latin"], display: "swap" });
-const aref = Aref_Ruqaa({
+const aref = Aref({
   variable: "--aref",
   subsets: ["arabic"],
   weight: ["400", "700"],
-  display: "swap",
+  display: "block",
 });
 
 export const metadata: Metadata = {
@@ -21,8 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`bg-peacoat-800 ${aref.variable} ${cairo.className}`}>
+    <html
+      lang="en"
+      className="scroll-smooth scrollbar-thin scrollbar-track-almondFrost-50 scrollbar-thumb-almondFrost-800 selection:bg-slate-500"
+    >
+      <body
+        className={`bg-peacoat-800 ${ruwuduRegular.variable} ${ruwuduMedium.variable} ${ruwuduSemiBold.variable} ${ruwuduBold.variable} ${aref.variable} ${cairo.className}`}
+      >
         {children}
       </body>
     </html>
