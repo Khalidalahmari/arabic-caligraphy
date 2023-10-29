@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Pattern from "../Patterns/Pattern";
 import background from "@/public/Images/11.2.png";
+import TestimonialCard2 from "./TestimonialCard2";
 
 type Props = {};
 
@@ -74,28 +75,29 @@ export default function Testimonials({}: Props) {
                   }}
                   className="flex flex-col gap-y-8"
                 >
-                  <TestimonialCard
-                    name="Bowen Ala"
-                    username="bowen_ala"
+                  <p></p>
+                  <TestimonialCard2
+                    name="يوسف حاتم"
+                    username="مصمم"
                     rating={4.5}
                     Comment={
-                      "I hired this interior design company to help me decorate my new home, and I couldn't be happier with the outcome. They listened to my ideas and helped me to create a space that is both stylish and functional. They were a pleasure to work with and I would recommend them to anyone looking for a top-notch interior design team."
+                      "دون الجوي استعملت الأوربيين, مواقعها الانجليزية وفي تم, نفس المؤلّفة استطاعوا إذ. و قبل الأرض موالية وبالتحديد،. إيو إذ للصين اعلان المتاخمة, قد كنقطة الجنوبي والفرنسي على, كلا عل الشرق، معاملة الحكومة. ذلك أمدها اليابان هو, حيث أن البرية شموليةً, قد عدم الأراضي الأمريكية. كل الطريق التقليدية عدم. وفي بل هنا؟ الإنزال, هو فعل بفرض الأرض. لغات اتفاق الرئيسية كان في."
                     }
                   />
-                  <TestimonialCard
-                    name={"Jimi Nurul"}
-                    username={"jimi_nurul"}
+                  <TestimonialCard2
+                    name={"خالد ماضي"}
+                    username={"مطور"}
                     rating={4.9}
                     Comment={
-                      "These guys transformed my living room into a beautiful and inviting space. They were able to work within my budget and gave me great advice on how to make the most of my small space. I am so impressed with the final result and would recommend them to anyone looking for a professional interior designer."
+                      "دون الجوي استعملت الأوربيين, مواقعها الانجليزية وفي تم, نفس المؤلّفة استطاعوا إذ. و قبل الأرض موالية وبالتحديد،. إيو إذ للصين اعلان المتاخمة, قد كنقطة الجنوبي والفرنسي على, كلا عل الشرق، معاملة الحكومة. ذلك أمدها اليابان هو, حيث أن البرية شموليةً, قد عدم الأراضي الأمريكية. كل الطريق التقليدية عدم. وفي بل هنا؟ الإنزال, هو فعل بفرض الأرض. لغات اتفاق الرئيسية كان في."
                     }
                   />
-                  <TestimonialCard
-                    name={"Karter Gerrard"}
-                    username={"karter_gerrard"}
+                  <TestimonialCard2
+                    name={"شاراد داود"}
+                    username={"مهندس"}
                     rating={4.9}
                     Comment={
-                      "I had the pleasure of working with this interior design company on a recent renovation project, and I couldn't be happier with the results. They took the time to understand my vision and preferences, and then brought it to life in a way that exceeded my expectations. Their attention to detail and creativity was impressive, and I highly recommend them to anyone looking for a professional and talented team."
+                      "دون الجوي استعملت الأوربيين, مواقعها الانجليزية وفي تم, نفس المؤلّفة استطاعوا إذ. و قبل الأرض موالية وبالتحديد،. إيو إذ للصين اعلان المتاخمة, قد كنقطة الجنوبي والفرنسي على, كلا عل الشرق، معاملة الحكومة. ذلك أمدها اليابان هو, حيث أن البرية شموليةً, قد عدم الأراضي الأمريكية. كل الطريق التقليدية عدم. وفي بل هنا؟ الإنزال, هو فعل بفرض الأرض. لغات اتفاق الرئيسية كان في."
                     }
                   />
                 </motion.div>
@@ -104,7 +106,17 @@ export default function Testimonials({}: Props) {
               </div>
 
               {/* fog */}
-              <div className="absolute bottom-0 mx-auto flex h-60 w-full items-end bg-gradient-to-t from-[#373741]"></div>
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.6,
+                  type: "spring",
+                  damping: 37,
+                  stiffness: 100,
+                }}
+                className="absolute bottom-0 mx-auto flex h-60 w-full items-end bg-gradient-to-t from-[#373741]"
+              ></motion.div>
             </div>
 
             {/* Col 2.3 */}
