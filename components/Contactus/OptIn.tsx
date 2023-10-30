@@ -8,7 +8,13 @@ import { BsGeoAlt } from "react-icons/bs";
 import Image from "next/image";
 import background from "@/public/Images/6.png";
 
-type Props = {};
+type Props = {
+  title?: string;
+  description?: string;
+  email?: string;
+  phone?: string;
+  location?: string;
+};
 const parent = {
   hidden: { opacity: 0 },
   show: {
@@ -32,7 +38,13 @@ const child = {
     opacity: 0,
   },
 };
-export default function OptIn({}: Props) {
+export default function OptIn({
+  title,
+  description,
+  email,
+  phone,
+  location,
+}: Props) {
   const [status, setStatus] = useState<string>("");
   const [Error, setError] = useState<boolean>(false);
   const ContactstateRef = useRef<boolean>();
@@ -107,34 +119,31 @@ export default function OptIn({}: Props) {
                 damping: 15,
                 stiffness: 50,
               }}
-              className="flex w-full flex-col items-end justify-start gap-y-6 self-start text-peacoat-800 sm:gap-y-12 lg:h-full lg:w-7/12"
+              className="flex w-full flex-col items-end justify-start gap-y-6 text-peacoat-800 sm:gap-y-12 lg:h-full lg:w-7/12 lg:self-start"
             >
               <h1
                 className={`font-Ruwudu-Bold xs:text-5xl discover-titleSize text-center font-extrabold sm:text-6xl md:!leading-normal lg:text-end lg:!leading-relaxed`}
               >
-                سجل معنا الآن
+                {title}
               </h1>
-              <p className="text-center text-sm font-medium text-peacoat-600 sm:text-base md:text-lg lg:text-end">
-                لديك تساؤلات؟ تريد معرفة المزيد عن الدورة؟ يمكنك التواصل معنا
-                الآن عن طريق استمارة التسجيل او عن طريق المعلومات اسفله
+              <p className="text-end text-sm font-medium text-peacoat-600 sm:text-base md:text-lg lg:text-end">
+                {description}
               </p>
-              <div className="flex w-full flex-col items-end justify-center gap-y-4">
+              <div className="flex w-full flex-col items-end justify-center gap-y-4 text-sm lg:text-base">
                 {/* #1 */}
                 <div className="flex flex-row-reverse items-center justify-end gap-x-2">
                   <AiOutlineMail className="h-6 w-6 text-peacoat-800" />
-                  <div className="font-medium">dumydumy.course@email.com</div>
+                  <div className="font-medium"> {email}</div>
                 </div>
                 {/* #2 */}
                 <div className="flex flex-row-reverse items-center justify-end gap-x-2">
                   <AiOutlinePhone className="h-6 w-6 text-peacoat-800" />
-                  <div className="font-medium">+1 (555) 123-456-789</div>
+                  <div className="font-medium">{phone}</div>
                 </div>
                 {/* #3 */}
                 <div className="flex flex-row-reverse items-center justify-end gap-x-2">
                   <BsGeoAlt className="h-6 w-6 text-peacoat-800" />
-                  <div className="font-medium">
-                    123 الشارع الرئيسي، سيدني نيو ساوث ويلز 2000، أستراليا
-                  </div>
+                  <div className="font-medium">{location}</div>
                 </div>
               </div>
             </motion.div>
@@ -156,7 +165,7 @@ export default function OptIn({}: Props) {
                 ref={form}
                 onSubmit={sendEmail}
                 // onSubmit={handleSubmit(onSubmit)}
-                className="flex w-full flex-col gap-y-8 "
+                className="flex w-full flex-col gap-y-8 text-xs md:text-base"
               >
                 <div className="relative flex flex-row-reverse gap-x-4">
                   <div className="relative flex w-1/2 flex-col items-end justify-start gap-y-1">

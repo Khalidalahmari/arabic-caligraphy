@@ -34,7 +34,7 @@ export default function Footer({}: Props) {
           className="flex origin-center flex-col items-center justify-center gap-y-8 py-6 md:gap-y-12"
         >
           <Image src={logo} alt={""} className="h-80 object-contain" />
-          <nav className="xs:gap-x-12 flex flex-row gap-x-5 truncate text-base text-peacoat-50 sm:gap-x-[74px]">
+          <nav className="xs:gap-x-12 flex flex-row-reverse gap-x-5 truncate text-base text-peacoat-50 sm:gap-x-[74px]">
             <Link
               href="#الرئيسية"
               className="transition-all duration-300 hover:text-peacoat-200"

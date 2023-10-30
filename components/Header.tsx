@@ -6,17 +6,22 @@ import Link from "next/link";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
-type Props = {};
+type Props = {
+  nav?: {
+    title: string;
+    href: string;
+  }[];
+  button?: string;
+};
 
 const variants = {
   open: { innerHeight: "0" },
   closed: { innerHeight: "-100%" },
 };
 
-export default function Header({}: Props) {
+export default function Header({ nav, button }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [width, setWidth] = useState<number>(0);
-
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
@@ -51,7 +56,7 @@ export default function Header({}: Props) {
                   href={"/#سجل الآن"}
                   className="flex shrink scale-100 cursor-pointer select-none rounded-full bg-almondFrost-800 px-5 py-3 text-xs font-bold text-peacoat-800 shadow-peacoat-400 drop-shadow-md !transition-all !duration-200 hover:bg-almondFrost-600 hover:drop-shadow-xl active:scale-95 lg:px-7 lg:py-4 lg:text-base"
                 >
-                  سجل الآن
+                  {button}
                 </Link>
               </motion.div>
               {/* logo & navigation*/}
@@ -73,30 +78,17 @@ export default function Header({}: Props) {
               >
                 {/* navigation */}
                 <nav className="hidden flex-row-reverse items-center gap-x-2 text-peacoat-800 lg:flex lg:gap-x-4">
-                  <Link
-                    className="hidden flex-auto items-center truncate rounded-2xl px-4 py-3 transition-all duration-300 hover:text-peacoat-600 sm:flex"
-                    href="#الرئيسية"
-                  >
-                    الرئيسية
-                  </Link>
-                  <Link
-                    className="hidden flex-auto snap-start items-center truncate rounded-2xl px-4 py-3 transition-all duration-300 hover:text-peacoat-600 sm:flex"
-                    href="#أهدافنا"
-                  >
-                    أهدافنا
-                  </Link>
-                  <Link
-                    className="hidden flex-auto items-center truncate rounded-2xl px-4 py-3 transition-all duration-300 hover:text-peacoat-600 sm:flex"
-                    href="#تزكيات"
-                  >
-                    تزكيات
-                  </Link>
-                  <Link
-                    className="hidden flex-auto items-center truncate rounded-2xl px-4 py-3 transition-all duration-300 hover:text-peacoat-600 sm:flex"
-                    href="#سجل الآن"
-                  >
-                    سجل الآن
-                  </Link>
+                  {nav?.map((v, index) => {
+                    return (
+                      <Link
+                        key={index}
+                        className="hidden flex-auto items-center truncate rounded-2xl px-4 py-3 transition-all duration-300 hover:text-peacoat-600 sm:flex"
+                        href={v.href}
+                      >
+                        {v.title}
+                      </Link>
+                    );
+                  })}
                 </nav>
                 <Link
                   href="/"
@@ -165,12 +157,28 @@ export default function Header({}: Props) {
                     >
                       <Link
                         href={"/#سجل الآن"}
-                        className="mt-5 w-full cursor-pointer select-none bg-almondFrost-800 px-7 py-3 text-sm font-medium text-peacoat-800 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95"
+                        className="mt-5 flex w-full cursor-pointer select-none items-center justify-center bg-almondFrost-800 px-7 py-3 text-sm font-medium text-peacoat-800 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95"
                       >
-                        سجل الآن
+                        {button}
                       </Link>
-                      <nav className="w-full divide-y divide-almondFrost-600 py-2 ">
-                        <Menu.Item>
+                      <nav className="w-full divide-y divide-almondFrost-600/40 py-2 ">
+                        {nav?.map((v, index) => {
+                          return (
+                            <Menu.Item key={index}>
+                              {({ active }) => (
+                                <Link
+                                  href={v.href}
+                                  className={`w-full ${
+                                    active ? "cursor-pointer" : ""
+                                  } group flex w-full items-center justify-end px-4 py-[16px] text-sm`}
+                                >
+                                  {v.title}
+                                </Link>
+                              )}
+                            </Menu.Item>
+                          );
+                        })}
+                        {/* <Menu.Item>
                           {({ active }) => (
                             <Link
                               href={"/"}
@@ -217,7 +225,7 @@ export default function Header({}: Props) {
                               سجل الآن
                             </Link>
                           )}
-                        </Menu.Item>
+                        </Menu.Item> */}
                       </nav>
                     </motion.div>
                   )}

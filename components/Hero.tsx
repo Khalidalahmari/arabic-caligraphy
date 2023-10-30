@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import background from "@/public/Images/2.jpg";
 // import logo from "@/public/logo.png";
 import { Aref_Ruqaa } from "next/font/google";
@@ -11,9 +11,21 @@ import Pattern from "./Patterns/Pattern";
 import Logo from "./Logos/Logo_Light";
 const aref = Aref_Ruqaa({ subsets: ["arabic"], weight: ["400", "700"] });
 
-type Props = {};
+type Props = {
+  title?: string;
+  title2?: string;
+  description?: string;
+  button1?: string;
+  button2?: string;
+};
 
-export default function Hero({}: Props) {
+export default function Hero({
+  title,
+  title2,
+  description,
+  button1,
+  button2,
+}: Props) {
   return (
     <div className="relative mx-auto h-full w-full max-w-[2250px]">
       <Image
@@ -41,10 +53,10 @@ export default function Hero({}: Props) {
           //   damping: 30,
           //   stiffness: 80,
           // }}
-          className="z-20 flex h-full items-center justify-center lg:w-1/2 lg:p-12"
+          className="z-20 flex  w-full items-center justify-center lg:w-1/2 lg:p-12"
         >
           {/* <Image src={logo} alt={"Logo"} className="h-full object-contain" /> */}
-          <Logo className="mx-auto h-full object-contain" />
+          <Logo className="mx-auto aspect-square object-contain" />
         </motion.div>
         <div
           className={`z-20 flex flex-col items-center justify-center gap-y-5 text-almondFrost-200 lg:w-3/5 lg:gap-y-16 lg:pr-20`}

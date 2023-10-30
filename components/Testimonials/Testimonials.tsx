@@ -11,11 +11,27 @@ import Pattern from "../Patterns/Pattern";
 import background from "@/public/Images/11.2.png";
 import TestimonialCard2 from "./TestimonialCard2";
 
-type Props = {};
+type Props = {
+  title?: string;
+  description?: string;
+  button?: string;
+  testimonials?: {
+    comment: string;
+    applicant: {
+      name: string;
+      job: string;
+    };
+  }[];
+};
 
-export default function Testimonials({}: Props) {
+export default function Testimonials({
+  title,
+  description,
+  button,
+  testimonials,
+}: Props) {
   return (
-    <div id={"تزكيات"} className="relative w-full bg-peacoat-800 py-20">
+    <div id={"تزكيات"} className="relative w-full bg-peacoat-800 py-12">
       <Image
         src={background}
         alt={""}
@@ -24,9 +40,9 @@ export default function Testimonials({}: Props) {
       />
       <div className="relative mx-auto max-w-[2500px]">
         {/* Patterns */}
-        <Pattern className="absolute -left-96 -top-[60%] h-[120%] origin-center opacity-60" />
+        <Pattern className="absolute -left-96 -top-[60%] z-0 h-[120%] origin-center opacity-60" />
         <div className="z-10 mx-3 flex h-[1000px] flex-col items-center gap-y-14 text-peacoat-200 sm:mx-8 lg:mx-16 lg:h-[780px] lg:flex-row lg:gap-x-24 xl:mx-28">
-          <div className="flex h-full w-full flex-col items-center justify-center gap-x-8 gap-y-12 lg:flex-row-reverse lg:gap-y-0">
+          <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-x-8 gap-y-12 lg:flex-row-reverse lg:gap-y-0">
             {/* Col 2.1 */}
             <motion.div
               viewport={{ once: true }}
@@ -41,10 +57,10 @@ export default function Testimonials({}: Props) {
               className="flex w-full flex-col gap-y-6 sm:gap-y-12 lg:h-full lg:w-7/12"
             >
               <h1 className="font-Ruwudu-Bold xs:text-5xl mt-10 text-center text-4xl font-extrabold text-peacoat-50 sm:text-6xl md:!leading-normal lg:text-end lg:text-5xl lg:!leading-relaxed xl:text-6xl xl:leading-[90px] 2xl:text-[70px]">
-                استمع إلى آراء الأشخاص الذين اختبروا خبرتنا
+                {title}
               </h1>
               <p className="text-center text-sm font-medium text-peacoat-200 sm:text-base md:text-lg lg:text-end">
-                تعرّف على ما يقوله تلاميذنا الراضون عن دورتنا الشاملة
+                {description}
               </p>
               <div className="hidden h-24 w-full flex-row items-center justify-end text-peacoat-50 lg:flex">
                 <Link
@@ -53,7 +69,7 @@ export default function Testimonials({}: Props) {
                   className="group flex h-16 w-full cursor-pointer flex-row-reverse items-center justify-center gap-x-5 overflow-hidden bg-almondFrost-800 px-8 py-0 font-bold transition-all duration-100 hover:bg-almondFrost-600 active:scale-95 lg:w-60"
                 >
                   <p className="transition-transform duration-300 group-focus:-translate-x-4">
-                    سجل الآن
+                    {button}
                   </p>
                   <HiArrowLeft className="xs:group-focus:-translate-x-96 h-5 w-5 pt-1 transition-transform duration-200 ease-out group-focus:-translate-x-32 group-focus:ease-in-out md:group-focus:-translate-x-[500px] lg:group-focus:-translate-x-24"></HiArrowLeft>
                 </Link>
@@ -75,31 +91,17 @@ export default function Testimonials({}: Props) {
                   }}
                   className="flex flex-col gap-y-8"
                 >
-                  <p></p>
-                  <TestimonialCard2
-                    name="يوسف حاتم"
-                    username="مصمم"
-                    rating={4.5}
-                    Comment={
-                      "دون الجوي استعملت الأوربيين, مواقعها الانجليزية وفي تم, نفس المؤلّفة استطاعوا إذ. و قبل الأرض موالية وبالتحديد،. إيو إذ للصين اعلان المتاخمة, قد كنقطة الجنوبي والفرنسي على, كلا عل الشرق، معاملة الحكومة. ذلك أمدها اليابان هو, حيث أن البرية شموليةً, قد عدم الأراضي الأمريكية. كل الطريق التقليدية عدم. وفي بل هنا؟ الإنزال, هو فعل بفرض الأرض. لغات اتفاق الرئيسية كان في."
-                    }
-                  />
-                  <TestimonialCard2
-                    name={"خالد ماضي"}
-                    username={"مطور"}
-                    rating={4.9}
-                    Comment={
-                      "دون الجوي استعملت الأوربيين, مواقعها الانجليزية وفي تم, نفس المؤلّفة استطاعوا إذ. و قبل الأرض موالية وبالتحديد،. إيو إذ للصين اعلان المتاخمة, قد كنقطة الجنوبي والفرنسي على, كلا عل الشرق، معاملة الحكومة. ذلك أمدها اليابان هو, حيث أن البرية شموليةً, قد عدم الأراضي الأمريكية. كل الطريق التقليدية عدم. وفي بل هنا؟ الإنزال, هو فعل بفرض الأرض. لغات اتفاق الرئيسية كان في."
-                    }
-                  />
-                  <TestimonialCard2
-                    name={"شاراد داود"}
-                    username={"مهندس"}
-                    rating={4.9}
-                    Comment={
-                      "دون الجوي استعملت الأوربيين, مواقعها الانجليزية وفي تم, نفس المؤلّفة استطاعوا إذ. و قبل الأرض موالية وبالتحديد،. إيو إذ للصين اعلان المتاخمة, قد كنقطة الجنوبي والفرنسي على, كلا عل الشرق، معاملة الحكومة. ذلك أمدها اليابان هو, حيث أن البرية شموليةً, قد عدم الأراضي الأمريكية. كل الطريق التقليدية عدم. وفي بل هنا؟ الإنزال, هو فعل بفرض الأرض. لغات اتفاق الرئيسية كان في."
-                    }
-                  />
+                  {testimonials?.map((testimonial, index) => {
+                    return (
+                      <TestimonialCard2
+                        key={index}
+                        name={testimonial.applicant.name}
+                        username={testimonial.applicant.job}
+                        rating={4.5}
+                        Comment={testimonial.comment}
+                      />
+                    );
+                  })}
                 </motion.div>
 
                 {/* <div className="flex h-96 w-full flex-col rounded-3xl border-[3px] border-gray-300 bg-[#fafafa]"></div> */}
