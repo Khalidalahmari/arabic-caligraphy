@@ -108,7 +108,7 @@ export default function OptIn({
           >
              ابدأ لآن
           </motion.h1> */}
-          <div className="flex h-full w-full flex-col items-center justify-center gap-x-20 gap-y-12 lg:flex-row lg:gap-y-0">
+          <div className="flex h-full w-full flex-col items-start justify-center gap-x-20 gap-y-12 lg:flex-row lg:gap-y-0">
             {/* Left Side: Col 2.1 */}
             <motion.div
               viewport={{ once: true }}
