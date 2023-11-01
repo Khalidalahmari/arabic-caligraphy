@@ -28,35 +28,23 @@ export default function Hero({
 }: Props) {
   return (
     <div className="relative mx-auto h-full w-full max-w-[2250px]">
-      <Image
+      {/* <Image
         src={background}
         alt={""}
         fill
         className="h-full w-full select-none object-cover opacity-10 blur-[2px]"
-      />
+      /> */}
 
       {/* Patterns */}
-      <Pattern className="absolute -left-96 -top-1/2 z-10 h-full origin-center opacity-60" />
-      <Pattern_Dark className="absolute -right-96 top-1/2 z-10 h-full origin-center opacity-70" />
+      <Pattern_Dark className="absolute -left-96 -top-1/2 z-10 h-full origin-center opacity-60" />
+      <Pattern className="absolute -right-96 top-1/2 z-10 h-full origin-center opacity-70" />
       {/* Fading sides */}
-      <div className="absolute left-0 top-1/2 z-0 hidden h-full w-96 -translate-y-1/2 bg-gradient-to-r from-peacoat-800 xl:flex"></div>
-      <div className="absolute right-0 top-1/2 z-0 hidden h-full w-96 -translate-y-1/2 bg-gradient-to-l from-peacoat-800 xl:flex"></div>
+      {/* <div className="absolute left-0 top-1/2 z-0 hidden h-full w-96 -translate-y-1/2 bg-gradient-to-r from-peacoat-800 xl:flex"></div>
+      <div className="absolute right-0 top-1/2 z-0 hidden h-full w-96 -translate-y-1/2 bg-gradient-to-l from-peacoat-800 xl:flex"></div> */}
       {/* Logo - pattern */}
       <div className="z-20 flex h-full w-full flex-col-reverse items-center justify-between gap-x-10 gap-y-5 p-11 lg:flex-row">
-        <motion.div
-          // viewport={{ once: true }}
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // transition={{
-          //   duration: 0.4,
-          //   type: "spring",
-          //   damping: 30,
-          //   stiffness: 80,
-          // }}
-          className="z-20 flex  w-full items-center justify-center lg:w-1/2 lg:p-12"
-        >
-          {/* <Image src={logo} alt={"Logo"} className="h-full object-contain" /> */}
-          <Logo className="mx-auto aspect-square object-contain" />
+        <motion.div className="z-20 flex w-full items-center justify-center lg:w-1/2 lg:p-0">
+          <Pattern className="mx-auto aspect-square w-full object-contain !p-0" />
         </motion.div>
         <div
           className={`z-20 flex flex-col items-center justify-center gap-y-5 text-almondFrost-200 lg:w-3/5 lg:gap-y-16 lg:pr-20`}
@@ -93,13 +81,11 @@ export default function Hero({
             }}
             className="z-10 max-w-xl self-end text-center text-sm lg:text-end lg:text-base"
           >
-            ايمانا بأهمية المحافظة على هذا التراث العربي الجميل في زمن كثر
-            الاعتماد فيه على الكتابة بوسائل التعنية الحديثة تسعى منصة أمشاق
-            لتقديم دورات تحسين الخط العربي لجميع الفئات العمرية
+            {description}
           </motion.div>
 
           {/* CAButton */}
-          <motion.div
+          {/* <motion.div
             viewport={{ once: true }}
             initial={{ x: -300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -118,7 +104,7 @@ export default function Hero({
             <Link href={"/#سجل الآن"} className="simple_Button">
               سجل الآن
             </Link>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </div>

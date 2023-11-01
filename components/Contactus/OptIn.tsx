@@ -7,6 +7,7 @@ import { AiFillPhone, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { BsGeoAlt } from "react-icons/bs";
 import Image from "next/image";
 import background from "@/public/Images/6.png";
+import Map from "./Map";
 
 type Props = {
   title?: string;
@@ -90,8 +91,8 @@ export default function OptIn({
         fill
         className="h-full w-full object-cover opacity-70 blur-[2px]"
       />
-      <div className="relative mx-auto max-w-[2500px]">
-        <div className="mx-3 flex flex-col items-center gap-y-14 text-peacoat-200 sm:mx-8 lg:mx-16 lg:flex-row lg:gap-x-24 xl:mx-28">
+      <div className="relative z-20 mx-auto max-w-[2500px]">
+        <div className=" mx-3 flex flex-col items-center gap-y-14 text-peacoat-200 sm:mx-8 lg:mx-16 lg:flex-row lg:gap-x-24 xl:mx-28">
           {/* <motion.h1
             variants={parent}
             initial={"hidden"}
@@ -122,7 +123,7 @@ export default function OptIn({
               className="flex w-full flex-col items-end justify-start gap-y-6 text-peacoat-800 sm:gap-y-12 lg:h-full lg:w-7/12 lg:self-start"
             >
               <h1
-                className={`font-Ruwudu-Bold xs:text-5xl discover-titleSize text-center font-extrabold sm:text-6xl md:!leading-normal lg:text-end lg:!leading-relaxed`}
+                className={`xs:text-5xl discover-titleSize text-center font-extrabold sm:text-6xl md:!leading-normal lg:text-end lg:!leading-relaxed`}
               >
                 {title}
               </h1>
@@ -146,6 +147,8 @@ export default function OptIn({
                   <div className="font-medium">{location}</div>
                 </div>
               </div>
+
+              <Map />
             </motion.div>
 
             {/* Form - Col 2.2 */}

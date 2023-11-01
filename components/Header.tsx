@@ -153,11 +153,11 @@ export default function Header({ nav, button }: Props) {
                       exit={{
                         height: 0,
                       }}
-                      className={"flex w-full flex-col gap-y-2 "}
+                      className={"flex w-full flex-col gap-y-2 py-4"}
                     >
                       <Link
                         href={"/#سجل الآن"}
-                        className="mt-5 flex w-full cursor-pointer select-none items-center justify-center bg-almondFrost-800 px-7 py-3 text-sm font-medium text-peacoat-800 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95"
+                        className="flex w-full cursor-pointer select-none items-center justify-center bg-almondFrost-800 px-7 py-3 text-sm font-medium text-peacoat-800 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95"
                       >
                         {button}
                       </Link>
