@@ -15,6 +15,10 @@ type Props = {
   email?: string;
   phone?: string;
   location?: string;
+  coordinates?: {
+    lat: string;
+    lng: string;
+  };
 };
 const parent = {
   hidden: { opacity: 0 },
@@ -45,6 +49,7 @@ export default function OptIn({
   email,
   phone,
   location,
+  coordinates,
 }: Props) {
   const [status, setStatus] = useState<string>("");
   const [Error, setError] = useState<boolean>(false);
@@ -148,7 +153,12 @@ export default function OptIn({
                 </div>
               </div>
 
-              <Map />
+              <Map
+                cords={{
+                  lat: coordinates?.lat as unknown as number,
+                  lng: coordinates?.lng as unknown as number,
+                }}
+              />
             </motion.div>
 
             {/* Form - Col 2.2 */}

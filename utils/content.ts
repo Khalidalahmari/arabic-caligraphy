@@ -41,5 +41,9 @@ export type contentType = {
     email: string;
     phone: string;
     location: string;
+    coordinates: {
+      lat: string;
+      lng: string;
+    };
   };
 };

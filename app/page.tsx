@@ -51,6 +51,7 @@ export default function Home() {
         email={Content?.joinNow.email}
         location={Content?.joinNow.location}
         phone={Content?.joinNow.phone}
+        coordinates={Content?.joinNow.coordinates}
       />
       <Footer />
     </div>
