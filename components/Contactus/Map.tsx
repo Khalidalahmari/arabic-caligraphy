@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
 type center = {
@@ -11,7 +11,7 @@ type Props = {
 
 function Map({ cords }: Props) {
   const [Center, setCenter] = useState({
-    lat: cords.lat ? cords.lat : 23.4241,
+    lat: cords.lat ? cords.lat : 24.3741,
     lng: cords.lng ? cords.lng : 53.8478,
   });
   const { isLoaded } = useJsApiLoader({
@@ -19,12 +19,21 @@ function Map({ cords }: Props) {
     googleMapsApiKey: process.env.NEXT_PUBLIC_API_KEY!,
   });
   const [map, setMap] = React.useState<google.maps.Map | null>(null);
+  useEffect(() => {
+    if (cords.lat) {
+      map?.setZoom(9);
+      setCenter({
+        lat: cords.lat,
+        lng: cords.lng,
+      });
+    }
+  }, [cords]);
 
   const onLoad = React.useCallback(function callback(map: google.maps.Map) {
     // This is just an example of getting and using the map instance!!! don't just blindly copy!
     const bounds = new window.google.maps.LatLngBounds(Center);
     map.fitBounds(bounds);
-
+    map.setZoom(9);
     setMap(map);
   }, []);
 
@@ -36,10 +45,10 @@ function Map({ cords }: Props) {
     <GoogleMap
       mapContainerStyle={{ aspectRatio: 1, width: "100%" }}
       center={{
-        lat: cords.lat as unknown as number,
-        lng: cords.lng as unknown as number,
+        lat: Center.lat,
+        lng: Center.lng,
       }}
-      zoom={10}
+      zoom={9}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
