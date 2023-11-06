@@ -62,7 +62,7 @@ export default function Discover({ title, title2, goals }: Props) {
           stiffness: 80,
         }}
         viewport={{ once: true }}
-        className="discover-titleSize z-10 mt-10 flex flex-col items-center justify-center text-center font-extrabold leading-tight"
+        className="discover-titleSize z-10 mx-auto mt-10 flex max-w-[2000px] flex-col items-center justify-center text-center font-extrabold leading-tight"
       >
         <motion.p
           transition={{

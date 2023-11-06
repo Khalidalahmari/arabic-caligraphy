@@ -97,70 +97,55 @@ export default function OptIn({
         className="h-full w-full object-cover opacity-70 blur-[2px]"
       />
       <div className="relative z-20 mx-auto max-w-[2500px]">
-        <div className=" mx-3 flex flex-col items-center gap-y-14 text-peacoat-200 sm:mx-8 lg:mx-16 lg:flex-row lg:gap-x-24 xl:mx-28">
-          {/* <motion.h1
-            variants={parent}
-            initial={"hidden"}
-            animate={"show"}
-            exit={"exit"}
-            transition={{
-              duration: 0.4,
-              type: "spring",
-              damping: 30,
-              stiffness: 80,
-            }}
-            className="discover-titleSize titleFont flex flex-col items-center justify-center font-medium leading-tight"
-          >
-             ابدأ لآن
-          </motion.h1> */}
-          <div className="flex h-full w-full flex-col items-start justify-center gap-x-20 gap-y-12 lg:flex-row lg:gap-y-0">
+        <div className="mx-3 flex flex-col items-center gap-y-14 text-peacoat-200 sm:mx-8 lg:mx-16 lg:flex-row lg:gap-x-24 xl:mx-28">
+          <div className="flex h-full w-full flex-col items-start justify-center gap-x-20 gap-y-12">
             {/* Left Side: Col 2.1 */}
-            <motion.div
-              viewport={{ once: true }}
-              initial={{ x: -300, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 0.3,
-                type: "spring",
-                damping: 15,
-                stiffness: 50,
-              }}
-              className="flex w-full flex-col items-end justify-start gap-y-6 text-peacoat-800 sm:gap-y-12 lg:h-full lg:w-7/12 lg:self-start"
-            >
-              <h1
-                className={`xs:text-5xl discover-titleSize text-center font-extrabold sm:text-6xl md:!leading-normal lg:text-end lg:!leading-relaxed`}
+            <div className="flex w-full flex-col gap-x-12 gap-y-12 lg:flex-row-reverse ">
+              <motion.div
+                viewport={{ once: true }}
+                initial={{ x: -300, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.3,
+                  type: "spring",
+                  damping: 15,
+                  stiffness: 50,
+                }}
+                className="flex flex-col items-end justify-start gap-y-6 text-peacoat-800 sm:gap-y-12 lg:h-full lg:w-[130%] lg:self-start"
               >
-                {title}
-              </h1>
-              <p className="text-end text-sm font-medium text-peacoat-600 sm:text-base md:text-lg lg:text-end">
-                {description}
-              </p>
-              <div className="flex w-full flex-col items-end justify-center gap-y-4 text-sm lg:text-base">
-                {/* #1 */}
-                <div className="flex flex-row-reverse items-center justify-end gap-x-2">
-                  <AiOutlineMail className="h-6 w-6 text-peacoat-800" />
-                  <div className="font-medium"> {email}</div>
+                <h1
+                  className={`xs:text-5xl discover-titleSize text-center font-extrabold sm:text-6xl md:!leading-normal lg:text-end lg:!leading-relaxed`}
+                >
+                  {title}
+                </h1>
+                <p className="text-end text-sm font-medium text-peacoat-600 sm:text-base md:text-lg lg:text-end">
+                  {description}
+                </p>
+                <div className="flex w-full flex-col items-end justify-center gap-y-4 text-sm lg:text-base">
+                  {/* #1 */}
+                  <div className="flex flex-row-reverse items-center justify-end gap-x-2">
+                    <AiOutlineMail className="h-6 w-6 text-peacoat-800" />
+                    <div className="font-medium"> {email}</div>
+                  </div>
+                  {/* #2 */}
+                  <div className="flex flex-row-reverse items-center justify-end gap-x-2">
+                    <AiOutlinePhone className="h-6 w-6 text-peacoat-800" />
+                    <div className="font-medium">{phone}</div>
+                  </div>
+                  {/* #3 */}
+                  <div className="flex flex-row-reverse items-center justify-end gap-x-2">
+                    <BsGeoAlt className="h-6 w-6 text-peacoat-800" />
+                    <div className="font-medium">{location}</div>
+                  </div>
                 </div>
-                {/* #2 */}
-                <div className="flex flex-row-reverse items-center justify-end gap-x-2">
-                  <AiOutlinePhone className="h-6 w-6 text-peacoat-800" />
-                  <div className="font-medium">{phone}</div>
-                </div>
-                {/* #3 */}
-                <div className="flex flex-row-reverse items-center justify-end gap-x-2">
-                  <BsGeoAlt className="h-6 w-6 text-peacoat-800" />
-                  <div className="font-medium">{location}</div>
-                </div>
-              </div>
-
+              </motion.div>
               <Map
                 cords={{
                   lat: coordinates?.lat as unknown as number,
                   lng: coordinates?.lng as unknown as number,
                 }}
               />
-            </motion.div>
-
+            </div>
             {/* Form - Col 2.2 */}
             <motion.div
               viewport={{ once: true }}
@@ -172,7 +157,7 @@ export default function OptIn({
                 damping: 15,
                 stiffness: 50,
               }}
-              className="relative h-full w-full overflow-hidden lg:w-8/12"
+              className="relative h-full w-full overflow-hidden "
             >
               <form
                 ref={form}

@@ -68,7 +68,7 @@ export default function Hero({
           </motion.div>
 
           {/* Description */}
-          <motion.div
+          {/* <motion.div
             viewport={{ once: true }}
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -82,7 +82,7 @@ export default function Hero({
             className="z-10 max-w-xl self-end text-center text-sm lg:text-end lg:text-base"
           >
             {description}
-          </motion.div>
+          </motion.div> */}
 
           {/* CAButton */}
           {/* <motion.div

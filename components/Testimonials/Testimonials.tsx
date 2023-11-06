@@ -44,8 +44,8 @@ export default function Testimonials({
         <Pattern className="absolute -left-96 -top-[60%] z-0 h-[120%] origin-center opacity-60" />
         <Pattern_Dark className="absolute -right-96 top-[60%] z-10 h-full origin-center opacity-70" />
 
-        <div className="z-10 mx-3 flex h-[1000px] flex-col items-center gap-y-14 text-peacoat-200 sm:mx-8 lg:mx-16 lg:h-[780px] lg:flex-row lg:gap-x-24 xl:mx-28">
-          <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-x-8 gap-y-12 lg:flex-row-reverse lg:gap-y-0">
+        <div className="z-10 mx-3 flex min-h-[1000px] flex-col items-center gap-y-14 text-peacoat-200 sm:mx-8 lg:mx-16 lg:min-h-[780px] lg:flex-row lg:gap-x-24 xl:mx-28">
+          <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-x-8 gap-y-12 ">
             {/* Col 2.1 */}
             <motion.div
               viewport={{ once: true }}
@@ -68,19 +68,19 @@ export default function Testimonials({
             </motion.div>
 
             {/* Col 2.2 */}
-            <div className="relative h-full w-full overflow-hidden lg:w-8/12">
-              <div className="grid h-full w-full grid-cols-1 gap-8">
+            <div className="relative w-full">
+              <div className="w-full">
                 <motion.div
                   viewport={{ once: true }}
-                  initial={{ y: 500, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
+                  initial={{ x: 500, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
                   transition={{
                     duration: 0.6,
                     type: "spring",
                     damping: 37,
                     stiffness: 100,
                   }}
-                  className="p1-2 flex flex-col gap-y-8 overflow-y-scroll scrollbar-thin scrollbar-track-peacoat-600/20 scrollbar-thumb-almondFrost-800 selection:bg-slate-500"
+                  className="flex flex-row gap-x-8 !overflow-x-scroll px-2 scrollbar-thin scrollbar-track-peacoat-600/20 scrollbar-thumb-almondFrost-800 selection:bg-slate-500"
                 >
                   {testimonials?.map((testimonial, index) => {
                     return (
@@ -99,7 +99,7 @@ export default function Testimonials({
               </div>
 
               {/* fog */}
-              <motion.div
+              {/* <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{
@@ -109,7 +109,7 @@ export default function Testimonials({
                   stiffness: 100,
                 }}
                 className="absolute bottom-0 mx-auto flex h-60 w-full items-end bg-gradient-to-t from-[#373741]"
-              ></motion.div>
+              ></motion.div> */}
             </div>
 
             {/* Col 2.3 */}

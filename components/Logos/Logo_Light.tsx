@@ -8,16 +8,16 @@ export default function Logo({ ...props }: Props) {
   const [strokeOpacity, setStrokeOpacity] = useState(1);
   const ref = useRef<any>(null);
   const isInView = useInView(ref, { once: true });
-  const svg = ` 
-  `;
-  let t = 1;
-  const updatedSvg = svg.replace(/delay: (\d+(\.\d+)?),/g, (match, p1) => {
-    const newDelay = (0.4 + 0.1 * t).toFixed(2);
-    t += 1;
-    return `delay: ${newDelay},`;
-  });
+  // const svg = `
+  // `;
+  // let t = 1;
+  // const updatedSvg = svg.replace(/delay: (\d+(\.\d+)?),/g, (match, p1) => {
+  //   const newDelay = (0.4 + 0.1 * t).toFixed(2);
+  //   t += 1;
+  //   return `delay: ${newDelay},`;
+  // });
 
-  console.log(updatedSvg);
+  // console.log(updatedSvg);
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"

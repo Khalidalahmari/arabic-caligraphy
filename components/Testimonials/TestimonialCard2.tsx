@@ -19,7 +19,7 @@ export default function TestimonialCard2({
   Comment = "My wife and I had a dream of downsizing from our house in Cape Elizabeth into a small condo closer to where we work and play in Portland. David and his skilled team helped make that dream a reality. The sale went smoothly, and we just closed on an ideal new place we're excited to call home.!",
 }: Props) {
   return (
-    <div className="flex w-full flex-col gap-y-4 divide-y-2 divide-peacoat-200/30 border-[1px] border-peacoat-600/30 bg-[#373741] px-8 py-6 text-peacoat-800 xl:px-10 xl:py-8">
+    <div className="flex w-full min-w-[300px] flex-col gap-y-4 divide-y-2 divide-peacoat-200/30 border-[1px] border-peacoat-600/30 bg-[#373741] px-8 py-6 text-peacoat-800 md:min-w-[500px] xl:px-10 xl:py-8">
       {/* top */}
       <div className="flex flex-col items-end justify-start text-end">
         <FaQuoteLeft className="h-28 w-28 text-almondFrost-extra1" />
