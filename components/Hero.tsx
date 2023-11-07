@@ -46,6 +46,7 @@ export default function Hero({
           ref={videoRef}
           loop
           autoPlay
+          playsInline
           muted
           className="pointer-events-none h-full w-full select-none overflow-hidden object-cover"
         >
