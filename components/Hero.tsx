@@ -50,14 +50,16 @@ export default function Hero({
           loop={true}
           controls={false}
           preload=""
+          src="/BackgroundVideo.webm#t=0.001"
+          // type="video/webm"
           className="pointer-events-none h-full w-full select-none overflow-hidden object-cover"
         >
           {/* <picture>
             <source srcSet="/BackgroundVideo.webm#t=0.001" type="video/webm" />
             <img alt="" src="/BackgroundVideo.webm" />
           </picture> */}
-          <source src="/BackgroundVideo.webm#t=0.001" type="video/webm" />
-          Your browser does not support the video tag.
+          {/* <source src="/BackgroundVideo.webm#t=0.001" type="video/webm" /> */}
+          {/* Your browser does not support the video tag. */}
         </video>
       </motion.div>
       {/* Patterns */}
