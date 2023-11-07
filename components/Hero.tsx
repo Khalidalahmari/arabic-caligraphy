@@ -50,7 +50,7 @@ export default function Hero({
           muted
           className="pointer-events-none h-full w-full select-none overflow-hidden object-cover"
         >
-          <source src="/BackgroundVideo.webm" type="video/webm" />
+          <source src="/BackgroundVideo.webm#t=0.001" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
