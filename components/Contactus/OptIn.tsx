@@ -16,8 +16,9 @@ type Props = {
   phone?: string;
   location?: string;
   coordinates?: {
-    lat: string;
-    lng: string;
+    lat: number;
+    lng: number;
+    zoom: number;
   };
 };
 const parent = {
@@ -89,7 +90,7 @@ export default function OptIn({
   const DraggableArea = useRef<HTMLDivElement>(null);
 
   return (
-    <div id="سجل الآن" className="relative w-full bg-white py-20">
+    <div className="relative w-full bg-white py-20">
       <Image
         src={background}
         alt={""}
@@ -139,15 +140,19 @@ export default function OptIn({
                   </div>
                 </div>
               </motion.div>
-              <Map
-                cords={{
-                  lat: coordinates?.lat as unknown as number,
-                  lng: coordinates?.lng as unknown as number,
-                }}
-              />
+              {coordinates?.lat && (
+                <Map
+                  cords={{
+                    lat: coordinates?.lat,
+                    lng: coordinates?.lng,
+                    zoom: coordinates?.zoom,
+                  }}
+                />
+              )}
             </div>
             {/* Form - Col 2.2 */}
             <motion.div
+              id="تواصل معنا"
               viewport={{ once: true }}
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -157,8 +162,13 @@ export default function OptIn({
                 damping: 15,
                 stiffness: 50,
               }}
-              className="relative h-full w-full overflow-hidden "
+              className="relative flex h-full w-full flex-col items-end justify-start gap-y-4 overflow-hidden "
             >
+              <h1
+                className={`xs:text-5xl discover-titleSize text-center font-extrabold text-peacoat-800 sm:text-6xl md:!leading-normal lg:text-end lg:!leading-relaxed`}
+              >
+                تواصل معنا
+              </h1>
               <form
                 ref={form}
                 onSubmit={sendEmail}

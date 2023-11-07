@@ -2,7 +2,7 @@
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import { profile } from "console";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import TestimonialCard from "./TestimonialCard";
 import { motion } from "framer-motion";
@@ -31,6 +31,18 @@ export default function Testimonials({
   button,
   testimonials,
 }: Props) {
+  const [width, setWidth] = useState<number>(0);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    handleWindowSizeChange();
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+  const isMobile = width == 0 ? false : width <= 500;
   return (
     <div id={"تزكيات"} className="relative w-full bg-peacoat-800 py-12">
       <Image
@@ -44,7 +56,7 @@ export default function Testimonials({
         <Pattern className="absolute -left-96 -top-[60%] z-0 h-[120%] origin-center opacity-60" />
         <Pattern_Dark className="absolute -right-96 top-[60%] z-10 h-full origin-center opacity-70" />
 
-        <div className="z-10 mx-3 flex min-h-[1000px] flex-col items-center gap-y-14 text-peacoat-200 sm:mx-8 lg:mx-16 lg:min-h-[780px] lg:flex-row lg:gap-x-24 xl:mx-28">
+        <div className="z-10 mx-3 my-5 flex flex-col items-center gap-y-14 text-peacoat-200 sm:mx-8 lg:mx-16 lg:min-h-[780px] lg:flex-row lg:gap-x-24 xl:mx-28">
           <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-x-8 gap-y-12 ">
             {/* Col 2.1 */}
             <motion.div
@@ -59,10 +71,10 @@ export default function Testimonials({
               }}
               className="flex w-full flex-col gap-y-6 sm:gap-y-12 lg:h-full lg:w-7/12"
             >
-              <h1 className="xs:text-5xl mt-10 text-center text-4xl font-extrabold text-peacoat-50 sm:text-6xl md:!leading-normal lg:text-end lg:text-5xl lg:!leading-relaxed xl:text-6xl xl:leading-[90px] 2xl:text-[70px]">
+              <h1 className="text-center text-3xl font-extrabold text-peacoat-50 sm:text-6xl md:!leading-normal lg:text-5xl lg:!leading-relaxed xl:text-6xl xl:leading-[90px] 2xl:text-[70px]">
                 {title}
               </h1>
-              <p className="text-center text-sm font-medium text-peacoat-200 sm:text-base md:text-lg lg:text-end">
+              <p className="text-center text-sm font-medium text-peacoat-200 sm:text-base md:text-lg">
                 {description}
               </p>
             </motion.div>
@@ -72,7 +84,7 @@ export default function Testimonials({
               <div className="w-full">
                 <motion.div
                   viewport={{ once: true }}
-                  initial={{ x: 500, opacity: 0 }}
+                  initial={{ x: 200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{
                     duration: 0.6,
@@ -80,7 +92,7 @@ export default function Testimonials({
                     damping: 37,
                     stiffness: 100,
                   }}
-                  className="flex flex-row gap-x-8 !overflow-x-scroll px-2 scrollbar-thin scrollbar-track-peacoat-600/20 scrollbar-thumb-almondFrost-800 selection:bg-slate-500"
+                  className="mdflex-row flex gap-x-8 !overflow-x-scroll px-2 scrollbar-thin scrollbar-track-peacoat-600/20 scrollbar-thumb-almondFrost-800 selection:bg-slate-500"
                 >
                   {testimonials?.map((testimonial, index) => {
                     return (

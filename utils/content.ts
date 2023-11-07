@@ -42,8 +42,9 @@ export type contentType = {
     phone: string;
     location: string;
     coordinates: {
-      lat: string;
-      lng: string;
+      lat: number;
+      lng: number;
+      zoom: number;
     };
   };
 };

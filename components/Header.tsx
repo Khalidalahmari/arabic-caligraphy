@@ -53,10 +53,11 @@ export default function Header({ nav, button }: Props) {
                 className="flex flex-1 items-center justify-start lg:flex-none "
               >
                 <Link
-                  href={"/#سجل الآن"}
-                  className="flex shrink scale-100 cursor-pointer select-none rounded-full bg-almondFrost-800 px-5 py-3 text-xs font-bold text-peacoat-800 shadow-peacoat-400 drop-shadow-md !transition-all !duration-200 hover:bg-almondFrost-600 hover:drop-shadow-xl active:scale-95 lg:px-7 lg:py-4 lg:text-base"
+                  href={"/#تواصل معنا"}
+                  className="flex shrink scale-100 cursor-pointer select-none items-center rounded-full bg-almondFrost-800 px-5 py-3 text-xs font-bold text-peacoat-800 shadow-peacoat-400 drop-shadow-md !transition-all !duration-200 hover:bg-almondFrost-600 hover:drop-shadow-xl active:scale-95 lg:px-7 lg:py-4 lg:text-base"
                 >
-                  {button}
+                  <span className="animate-pulse lg:text-sm">(قريبا)</span>
+                  &nbsp;{button}
                 </Link>
               </motion.div>
               {/* logo & navigation*/}
@@ -155,12 +156,12 @@ export default function Header({ nav, button }: Props) {
                       }}
                       className={"flex w-full flex-col gap-y-2 py-4"}
                     >
-                      <Link
-                        href={"/#سجل الآن"}
+                      {/* <Link
+                        href={"/#تواصل معنا"}
                         className="flex w-full cursor-pointer select-none items-center justify-center bg-almondFrost-800 px-7 py-3 text-sm font-medium text-peacoat-800 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95"
                       >
                         {button}
-                      </Link>
+                      </Link> */}
                       <nav className="w-full divide-y divide-almondFrost-600/40 py-2 ">
                         {nav?.map((v, index) => {
                           return (

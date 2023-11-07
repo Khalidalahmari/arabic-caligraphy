@@ -68,6 +68,11 @@ body {
   --title: clamp(1.875rem, 0.788rem + 5.4348vw, 5rem);
   font-size: var(--title);
 }
+.discover-titleSize-Small {
+  /* Title: 16.00px → 36.00px */
+  --title2: clamp(1rem, 0.5652rem + 2.1739vw, 2.25rem);
+  font-size: var(--title2);
+}
 
 /* OptIn */
 

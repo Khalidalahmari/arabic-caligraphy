@@ -62,7 +62,7 @@ export default function Discover({ title, title2, goals }: Props) {
           stiffness: 80,
         }}
         viewport={{ once: true }}
-        className="discover-titleSize z-10 mx-auto mt-10 flex max-w-[2000px] flex-col items-center justify-center text-center font-extrabold leading-tight"
+        className="discover-titleSize-Small z-10 mx-auto mt-10 flex flex-col items-center justify-center px-5 text-center font-extrabold leading-tight sm:px-16 md:max-w-[70%]"
       >
         <motion.p
           transition={{
@@ -77,7 +77,7 @@ export default function Discover({ title, title2, goals }: Props) {
         >
           {title}
         </motion.p>
-        <motion.p
+        {/* <motion.p
           transition={{
             duration: 0.4,
             type: "spring",
@@ -88,7 +88,7 @@ export default function Discover({ title, title2, goals }: Props) {
           viewport={{ once: true }}
         >
           {title2}
-        </motion.p>
+        </motion.p> */}
       </motion.h1>
 
       <motion.div

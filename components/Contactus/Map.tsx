@@ -4,6 +4,7 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 type center = {
   lat: number;
   lng: number;
+  zoom: number;
 };
 type Props = {
   cords: center;
@@ -11,8 +12,8 @@ type Props = {
 
 function Map({ cords }: Props) {
   const [Center, setCenter] = useState({
-    lat: cords.lat ? cords.lat : 24.3741,
-    lng: cords.lng ? cords.lng : 53.8478,
+    lat: cords.lat,
+    lng: cords.lng,
   });
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
@@ -33,7 +34,7 @@ function Map({ cords }: Props) {
     // This is just an example of getting and using the map instance!!! don't just blindly copy!
     const bounds = new window.google.maps.LatLngBounds(Center);
     map.fitBounds(bounds);
-    map.setZoom(9);
+    map.setZoom(cords.zoom);
     setMap(map);
   }, []);
 
@@ -48,7 +49,7 @@ function Map({ cords }: Props) {
         lat: Center.lat,
         lng: Center.lng,
       }}
-      zoom={9}
+      zoom={cords.zoom}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
