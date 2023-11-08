@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="relative mx-auto flex h-full min-h-screen w-screen flex-col items-center justify-start pt-20">
       <Header
-        href={Content?.header.href && "/#"}
+        href={Content?.header.href ? Content?.header.href : "/#"}
         nav={Content?.header.nav}
         button={Content?.header.button}
       />
