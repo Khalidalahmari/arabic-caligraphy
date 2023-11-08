@@ -55,13 +55,8 @@ export default function Hero({
           height="100%"
           className="pointer-events-none h-full w-full select-none overflow-hidden object-cover"
         >
-          {/* <picture>
-            <source srcSet="/BackgroundVideo.webm#t=0.001" type="video/webm" />
-            <img alt="" src="/BackgroundVideo.webm" />
-          </picture> */}
           <source src="/BackgroundVideo.webm#t=0.001" type="video/webm" />
           <source src="/BackgroundVideo.mp4#t=0.001" type="video/mp4" />
-          {/* Your browser does not support the video tag. */}
         </video>
       </motion.div>
       {/* Patterns */}

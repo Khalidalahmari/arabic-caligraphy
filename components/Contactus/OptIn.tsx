@@ -62,10 +62,10 @@ export default function OptIn({
     setTimeout(() => {
       emailjs
         .sendForm(
-          "service_bmut4ji",
-          "template_s6o6oy9",
+          "service_bktyv3c",
+          "template_byltm9h",
           form.current,
-          "TDG44JLNUvfBRcavi",
+          "ysa1TsNeD5Q0Z4APr",
         )
         .then(
           (result) => {
