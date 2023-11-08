@@ -5,6 +5,7 @@ export type contentType = {
       href: string;
     }[];
     button: string;
+    href: string;
   };
   hero: {
     title: string;
