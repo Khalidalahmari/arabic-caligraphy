@@ -22,7 +22,7 @@ function Map({ cords }: Props) {
   const [map, setMap] = React.useState<google.maps.Map | null>(null);
   useEffect(() => {
     if (cords.lat) {
-      map?.setZoom(9);
+      map?.setZoom(cords.zoom);
       setCenter({
         lat: cords.lat,
         lng: cords.lng,
