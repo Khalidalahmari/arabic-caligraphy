@@ -145,7 +145,7 @@ export default function OptIn({
                   cords={{
                     lat: coordinates?.lat,
                     lng: coordinates?.lng,
-                    zoom: coordinates?.zoom,
+                    zoom: coordinates.zoom,
                   }}
                 />
               )}

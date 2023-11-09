@@ -28,12 +28,9 @@ function Map({ cords }: Props) {
         lng: cords.lng,
       });
     }
-  }, [cords]);
+  }, [cords, map]);
 
   const onLoad = React.useCallback(function callback(map: google.maps.Map) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    const bounds = new window.google.maps.LatLngBounds(Center);
-    map.fitBounds(bounds);
     map.setZoom(cords.zoom);
     setMap(map);
   }, []);
@@ -49,7 +46,6 @@ function Map({ cords }: Props) {
         lat: Center.lat,
         lng: Center.lng,
       }}
-      zoom={cords.zoom}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >

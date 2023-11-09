@@ -30,6 +30,7 @@ export default function Home() {
         href={Content?.header.href ? Content?.header.href : "/#"}
         nav={Content?.header.nav}
         button={Content?.header.button}
+        soon={Content?.header.soon}
       />
       <Hero
         button1={Content?.hero.button1}

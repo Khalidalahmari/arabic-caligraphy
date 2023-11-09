@@ -13,6 +13,7 @@ type Props = {
   }[];
   button?: string;
   href: string;
+  soon?: boolean;
 };
 
 const variants = {
@@ -20,7 +21,7 @@ const variants = {
   closed: { innerHeight: "-100%" },
 };
 
-export default function Header({ nav, button, href }: Props) {
+export default function Header({ nav, button, href, soon }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [width, setWidth] = useState<number>(0);
   function handleWindowSizeChange() {
@@ -57,7 +58,9 @@ export default function Header({ nav, button, href }: Props) {
                   href={href && "/#"}
                   className="flex shrink scale-100 cursor-pointer select-none items-center rounded-full bg-almondFrost-800 px-5 py-3 text-xs font-bold text-peacoat-800 shadow-peacoat-400 drop-shadow-md !transition-all !duration-200 hover:bg-almondFrost-600 hover:drop-shadow-xl active:scale-95 lg:px-7 lg:py-4 lg:text-base"
                 >
-                  <span className="animate-pulse lg:text-sm">(قريبا)</span>
+                  {soon && (
+                    <span className="animate-pulse lg:text-sm">(قريبا)</span>
+                  )}
                   &nbsp;{button}
                 </Link>
               </motion.div>
