@@ -58,7 +58,7 @@ body {
 
 .title-size {
   /* Title: 30.00px → 96.00px */
-  --title: clamp(1.875rem, 0.4402rem + 7.1739vw, 6rem);
+  --title: clamp(1.875rem, 0.4402rem + 7.1739vw, 4.5rem);
   font-size: var(--title);
 }
 
