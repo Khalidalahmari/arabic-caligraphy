@@ -81,10 +81,10 @@ export default function Hero({
             }}
             className={`title-size titleFont flex w-full flex-col items-center justify-center text-center lg:items-end lg:text-end`}
           >
-            <p className="-rotate-0">تعلم قوام الخط يا ذا التأدب</p>
+            <p className="-rotate-0">{title}</p>
             ،،
             <br />
-            <p className="-rotate-0">فما الخط إلا زينة المتأدب</p>
+            <p className="-rotate-0">{title2}</p>
           </motion.div>
         </div>
       </div>

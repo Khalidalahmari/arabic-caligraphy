@@ -21,6 +21,7 @@ export default function Home() {
       });
       const sdata: contentType = await response.json();
       SetContent(sdata);
+      console.log(sdata);
     };
     Fetch();
   }, []);

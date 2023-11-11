@@ -5,7 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import star from "@/public/images/star.png";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaSnapchatGhost,
+  FaTiktok,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import background from "@/public/Images/11.2.png";
 
@@ -48,10 +53,10 @@ export default function Footer({}: Props) {
               أهدافنا
             </Link>
             <Link
-              href="#تزكيات"
+              href="#آراء المتدربين"
               className="transition-all duration-300 hover:text-peacoat-200"
             >
-              تزكيات
+              آراء المتدربين
             </Link>
             <Link
               href="#سجل الآن"
@@ -62,18 +67,22 @@ export default function Footer({}: Props) {
           </nav>
 
           <div className="flex min-w-0 flex-1 flex-row gap-x-4 sm:gap-x-8">
-            <Link
-              href={"#"}
-              className="group flex min-w-0 flex-1 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50"
-            >
-              <FaFacebook className="h-6 w-6 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90"></FaFacebook>
-              <span className="transition-color xs:text-sm text-xs opacity-0 duration-200 group-hover:opacity-100">
-                facebook
+            <div className="group flex min-w-0 flex-1 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50">
+              <FaTiktok className="h-6 w-6 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90"></FaTiktok>
+              <span className="transition-color xs:text-sm truncate px-2 text-xs opacity-0 duration-200 group-hover:opacity-100">
+                TikTok: @amshag
               </span>
-            </Link>
+            </div>
+            <div className="group flex min-w-0 flex-1 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50">
+              <FaSnapchatGhost className="h-6 w-6 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90"></FaSnapchatGhost>
+              <span className="transition-color xs:text-sm truncate px-2 text-xs opacity-0 duration-200 group-hover:opacity-100">
+                Snapchat: @amshag
+              </span>
+            </div>
 
             <Link
-              href={"#"}
+              target="_blank"
+              href={"https://www.instagram.com/amshag_com/"}
               className="group flex min-w-0 flex-1 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50"
             >
               <FaInstagram className="h-6 w-6 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90"></FaInstagram>
@@ -82,7 +91,8 @@ export default function Footer({}: Props) {
               </span>
             </Link>
             <Link
-              href={"#"}
+              target="_blank"
+              href={"https://twitter.com/Amshag_com"}
               className="group flex min-w-0 flex-1 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50"
             >
               <FaXTwitter className="h-6 w-6 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90"></FaXTwitter>
@@ -91,7 +101,7 @@ export default function Footer({}: Props) {
               </span>
             </Link>
           </div>
-          <p className="text-sm text-stone-100/50">@Copyright 2023 - Test</p>
+          <p className="text-sm text-stone-100/50">@Copyright 2023 - Amshag</p>
         </motion.div>
       </div>
     </div>

@@ -38,7 +38,7 @@ export default function Card({ title, description, image }: Props) {
         damping: 30,
         stiffness: 80,
       }}
-      className="relative z-10 mx-1 flex aspect-[10/10] max-w-sm flex-col items-center justify-center gap-y-8 px-4 text-center text-almondFrost-50 md:gap-y-12"
+      className="relative z-10 mx-1 flex aspect-[10/10] max-w-sm flex-col items-center justify-center gap-y-8 self-stretch justify-self-stretch px-4 text-center text-almondFrost-50 md:gap-y-12"
     >
       <Image
         src={image}

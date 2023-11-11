@@ -44,7 +44,7 @@ export default function Testimonials({
   }, []);
   const isMobile = width == 0 ? false : width <= 500;
   return (
-    <div id={"تزكيات"} className="relative w-full bg-peacoat-800 py-12">
+    <div id={"آراء المتدربين"} className="relative w-full bg-peacoat-800 py-12">
       <Image
         src={background}
         alt={""}
