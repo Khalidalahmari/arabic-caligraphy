@@ -21,13 +21,13 @@ export default function Hero({
 }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play();
-      }
-    }, 5000);
-  }, [videoRef]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (videoRef.current) {
+  //       videoRef.current.play();
+  //     }
+  //   }, 1000);
+  // }, [videoRef]);
   return (
     <div className="relative mx-auto h-full w-full max-w-[2250px]">
       <motion.div
