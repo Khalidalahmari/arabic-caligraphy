@@ -55,8 +55,8 @@ export default function Hero({
           height="100%"
           className="pointer-events-none h-full w-full select-none overflow-hidden object-cover"
         >
+          <source src="/BackgroundVideo.mp4" type="video/mp4" />
           <source src="/BackgroundVideo.webm#t=0.001" type="video/webm" />
-          <source src="/BackgroundVideo.mp4#t=0.001" type="video/mp4" />
         </video>
       </motion.div>
       {/* Patterns */}
