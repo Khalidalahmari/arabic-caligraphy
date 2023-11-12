@@ -104,7 +104,7 @@ export default function Discover({ title, title2, goals }: Props) {
         animate={"show"}
         exit={"exit"}
         viewport={{ once: true }}
-        className="z-10 mb-10 grid grid-cols-3 items-center justify-center gap-x-4 gap-y-5 lg:flex-row"
+        className="z-10 mb-10 grid grid-cols-1 grid-rows-3 items-center justify-center gap-x-4 gap-y-5 lg:grid-cols-3 lg:grid-rows-1 lg:flex-row"
       >
         <>
           {goals?.map((goal, index) => {
