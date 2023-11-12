@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 
 type center = {
   lat: number;
@@ -50,7 +50,14 @@ function Map({ cords }: Props) {
       onUnmount={onUnmount}
     >
       {/* Child components, such as markers, info windows, etc. */}
-      <></>
+      <>
+        <Marker
+          position={{
+            lat: Center.lat,
+            lng: Center.lng,
+          }}
+        />
+      </>
     </GoogleMap>
   ) : (
     <></>
