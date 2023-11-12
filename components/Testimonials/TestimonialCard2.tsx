@@ -14,7 +14,7 @@ type Props = {
 
 export default function TestimonialCard2({
   name = "Bessie Alexa",
-  username = "bessiee",
+  username = "",
   rating = 4.9,
   Comment = "My wife and I had a dream of downsizing from our house in Cape Elizabeth into a small condo closer to where we work and play in Portland. David and his skilled team helped make that dream a reality. The sale went smoothly, and we just closed on an ideal new place we're excited to call home.!",
 }: Props) {
@@ -32,9 +32,6 @@ export default function TestimonialCard2({
       <div className="flex flex-col items-end gap-y-2 pt-3">
         <div className="xs:text-xl flex flex-col items-end gap-y-1 text-lg">
           <p className=" font-bold text-almondFrost-200 ">{name}</p>
-          <div className="xs:text-xl flex flex-row items-end gap-x-2 text-base font-semibold text-almondFrost-400/40">
-            {username}
-          </div>
         </div>
       </div>
     </div>
