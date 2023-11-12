@@ -39,7 +39,7 @@ export default function Footer({}: Props) {
           className="flex origin-center flex-col items-center justify-center gap-y-8 py-6 md:gap-y-12"
         >
           <Image src={logo} alt={""} className="h-80 object-contain" />
-          <nav className="xs:gap-x-12 flex flex-row-reverse gap-x-5 truncate text-base text-peacoat-50 sm:gap-x-[74px]">
+          <nav className="flex flex-row-reverse gap-x-5 truncate text-sm text-peacoat-50 sm:gap-x-[74px] sm:text-base">
             <Link
               href="#الرئيسية"
               className="transition-all duration-300 hover:text-peacoat-200"
@@ -66,26 +66,30 @@ export default function Footer({}: Props) {
             </Link>
           </nav>
 
-          <div className="flex min-w-0 flex-1 flex-row gap-x-4 sm:gap-x-8">
-            <div className="group flex min-w-0 flex-1 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50">
-              <FaTiktok className="h-6 w-6 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90"></FaTiktok>
-              <span className="transition-color xs:text-sm truncate px-2 text-xs opacity-0 duration-200 group-hover:opacity-100">
-                TikTok: @amshag
+          <div className="flex min-w-0 max-w-full flex-row items-start justify-center gap-x-2 sm:gap-x-8">
+            <div className="group flex w-1/4 min-w-0 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50 sm:flex-1">
+              <FaTiktok className="h-5 w-5 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90 sm:h-6 sm:w-6"></FaTiktok>
+              <span className="transition-color xs:text-sm flex items-center justify-center truncate px-2  text-xs opacity-0 duration-200 group-hover:opacity-100">
+                TikTok:
+                <br />
+                @amshag
               </span>
             </div>
-            <div className="group flex min-w-0 flex-1 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50">
-              <FaSnapchatGhost className="h-6 w-6 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90"></FaSnapchatGhost>
-              <span className="transition-color xs:text-sm truncate px-2 text-xs opacity-0 duration-200 group-hover:opacity-100">
-                Snapchat: @amshag
+            <div className="group flex w-1/4 min-w-0 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50 sm:flex-1">
+              <FaSnapchatGhost className="h-5 w-5 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90 sm:h-6 sm:w-6"></FaSnapchatGhost>
+              <span className="transition-color xs:text-sm flex truncate px-2 text-center text-xs opacity-0 duration-200 group-hover:opacity-100">
+                Snapchat:
+                <br />
+                @amshag
               </span>
             </div>
 
             <Link
               target="_blank"
               href={"https://www.instagram.com/amshag_com/"}
-              className="group flex min-w-0 flex-1 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50"
+              className="group flex w-1/4 min-w-0 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50 sm:flex-1"
             >
-              <FaInstagram className="h-6 w-6 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90"></FaInstagram>
+              <FaInstagram className="h-5 w-5 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90 sm:h-6 sm:w-6"></FaInstagram>
               <span className="transition-color xs:text-sm text-xs opacity-0 duration-200 group-hover:opacity-100">
                 Instagram
               </span>
@@ -93,9 +97,9 @@ export default function Footer({}: Props) {
             <Link
               target="_blank"
               href={"https://twitter.com/Amshag_com"}
-              className="group flex min-w-0 flex-1 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50"
+              className="group flex w-1/4 min-w-0 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50 sm:flex-1"
             >
-              <FaXTwitter className="h-6 w-6 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90"></FaXTwitter>
+              <FaXTwitter className="h-5 w-5 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90 sm:h-6 sm:w-6"></FaXTwitter>
               <span className="transition-color xs:text-sm truncate text-xs opacity-0 duration-200 group-hover:opacity-100">
                 XTwitter
               </span>

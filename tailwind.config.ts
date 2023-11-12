@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: { raw: "(min-height: 380px)" },
+        // => @media (min-height: 800px) { ... }
+      },
       colors: {
         peacoat: {
           //text

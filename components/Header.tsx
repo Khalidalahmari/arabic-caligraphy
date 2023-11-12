@@ -56,10 +56,12 @@ export default function Header({ nav, button, href, soon }: Props) {
               >
                 <Link
                   href={href && "/#"}
-                  className="flex shrink scale-100 cursor-pointer select-none items-center rounded-full bg-almondFrost-800 px-5 py-3 text-xs font-bold text-peacoat-800 shadow-peacoat-400 drop-shadow-md !transition-all !duration-200 hover:bg-almondFrost-600 hover:drop-shadow-xl active:scale-95 lg:px-7 lg:py-4 lg:text-base"
+                  className="xs:px-5 xs:text-xs flex shrink scale-100 cursor-pointer select-none items-center overflow-hidden truncate rounded-full bg-almondFrost-800 px-2 py-3 font-bold text-peacoat-800 shadow-peacoat-400 drop-shadow-md !transition-all !duration-200 hover:bg-almondFrost-600 hover:drop-shadow-xl active:scale-95 lg:px-7 lg:py-4 lg:text-base"
                 >
                   {soon && (
-                    <span className="animate-pulse lg:text-sm">(قريبا)</span>
+                    <span className="animate-pulse text-[10px]  lg:text-sm">
+                      (قريبا)
+                    </span>
                   )}
                   &nbsp;{button}
                 </Link>
