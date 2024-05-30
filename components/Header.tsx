@@ -106,11 +106,6 @@ export default function Header({ nav, button, href, soon }: Props) {
                     alt={"Logo"}
                     className="aspect-square h-20 w-20 object-contain"
                   />
-                  {/* <Image
-                  src={logo2 as any}
-                  alt={"Logo"}
-                  className="aspect-square h-16 w-16  object-contain invert"
-                /> */}
                 </Link>
               </motion.div>
 
@@ -162,12 +157,6 @@ export default function Header({ nav, button, href, soon }: Props) {
                       }}
                       className={"flex w-full flex-col gap-y-2 py-4"}
                     >
-                      {/* <Link
-                        href={"/#تواصل معنا"}
-                        className="flex w-full cursor-pointer select-none items-center justify-center bg-almondFrost-800 px-7 py-3 text-sm font-medium text-peacoat-800 transition-all duration-100 hover:bg-almondFrost-600 active:scale-95"
-                      >
-                        {button}
-                      </Link> */}
                       <nav className="w-full divide-y divide-almondFrost-600/40 py-2 ">
                         {nav?.map((v, index) => {
                           return (
@@ -184,55 +173,7 @@ export default function Header({ nav, button, href, soon }: Props) {
                               )}
                             </Menu.Item>
                           );
-                        })}
-                        {/* <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href={"/"}
-                              className={`w-full ${
-                                active ? "cursor-pointer" : ""
-                              } group flex w-full items-center px-4 py-[16px] text-sm`}
-                            >
-                              الرئيسية
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href={"/"}
-                              className={`w-full ${
-                                active ? "cursor-pointer" : ""
-                              } group flex w-full items-center px-4 py-[16px] text-sm`}
-                            >
-                              أهدافنا
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href={"/"}
-                              className={`w-full ${
-                                active ? "cursor-pointer" : ""
-                              } group flex w-full items-center px-4 py-[16px] text-sm`}
-                            >
-                              تزكيات
-                            </Link>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <Link
-                              href={"/#سجل الآن"}
-                              className={`w-full ${
-                                active ? "cursor-pointer" : ""
-                              } group flex w-full items-center px-4 py-[16px] text-sm`}
-                            >
-                              سجل الآن
-                            </Link>
-                          )}
-                        </Menu.Item> */}
+                        })}    
                       </nav>
                     </motion.div>
                   )}
