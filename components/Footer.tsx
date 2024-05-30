@@ -93,17 +93,7 @@ export default function Footer({}: Props) {
               <span className="transition-color xs:text-sm text-xs opacity-0 duration-200 group-hover:opacity-100">
                 Instagram
               </span>
-            </Link>
-            <Link
-              target="_blank"
-              href={"https://twitter.com/Amshag_com"}
-              className="group flex w-1/4 min-w-0 flex-col items-center justify-center gap-y-3 tracking-wider text-stone-100/50 sm:flex-1"
-            >
-              <FaXTwitter className="h-5 w-5 cursor-pointer text-stone-100 transition-transform duration-200 hover:scale-105 active:scale-90 sm:h-6 sm:w-6"></FaXTwitter>
-              <span className="transition-color xs:text-sm truncate text-xs opacity-0 duration-200 group-hover:opacity-100">
-                XTwitter
-              </span>
-            </Link>
+            </Link>   
           </div>
           <p className="text-sm text-stone-100/50">@Copyright 2023 - Amshag</p>
         </motion.div>
